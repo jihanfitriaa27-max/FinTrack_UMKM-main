@@ -354,7 +354,7 @@ function LoginPage({ setCurrentPage, setUser }) {
           }}
         >
           <img
-            src="/FinTrack-UMKM/Logo.jpg"
+            src="/Logo.jpg"
             alt="FinTrack Logo"
             style={{
               width: "40px",
@@ -788,7 +788,7 @@ function Sidebar({ currentPage, setCurrentPage, onLogout }) {
         }}
       >
         <img
-          src="/FinTrack-UMKM/Logo.jpg"
+          src="/Logo.jpg"
           alt="FinTrack Logo"
           style={{
             width: "36px",
