@@ -29,10 +29,10 @@ Route::middleware('auth:api')->group(function () {
     // Transactions
     Route::get('/transactions', [TransactionController::class, 'index']);
     Route::post('/transactions', [TransactionController::class, 'store']);
+    Route::get('/transactions/summary', [TransactionController::class, 'summary']);
     Route::get('/transactions/{transaction}', [TransactionController::class, 'show']);
     Route::put('/transactions/{transaction}', [TransactionController::class, 'update']);
     Route::delete('/transactions/{transaction}', [TransactionController::class, 'destroy']);
-    Route::get('/transactions/summary', [TransactionController::class, 'summary']);
 
     // Products
     Route::get('/products', [ProductController::class, 'index']);

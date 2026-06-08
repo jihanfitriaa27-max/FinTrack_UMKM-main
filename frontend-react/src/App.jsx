@@ -1585,7 +1585,11 @@ function TransactionsPage() {
     e.preventDefault();
 
     try {
-      await transactionService.create(formData);
+      await transactionService.create({
+      ...formData,
+      amount: parseInt(formData.amount, 10),
+    });
+
 
       setFormData({
         type: "pengeluaran",
@@ -2297,7 +2301,13 @@ function InventoryPage() {
     e.preventDefault();
 
     try {
-      await productService.create(formData);
+      await productService.create({
+      ...formData,
+      modal: parseInt(formData.modal, 10),
+      jual: parseInt(formData.jual, 10),
+      min_stock: parseInt(formData.min_stock, 10) || 0,
+    });
+
 
       setShowModal(false);
 
